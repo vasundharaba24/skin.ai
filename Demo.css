@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {
+    --first-color: #e3f8ff; /* Light blue */
+    --second-color: #dcefeff8; /* Light green */
+    --third-color: #fdebe3d5; /* Light pink */
+    --fourth-color: #f7f3d198; /* Light yellow */
+    --fifth-color: #ffe0e0; /* Light coral */
+    --accent-color: #FF5151; /* Accent color */
+    --dark-color: #161616; /* Dark text color */
+}
+
+:root {
+    --body-font: 'Open Sans';
+    --h1-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --smaller-font-size: 0.75rem;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --h1-font-size: 2rem;
+        --normal-font-size: 1rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.bg-main {
+    min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+    background-color: #e7e8ea;
+    color: var(--dark-color);
+    font-family: var(--body-font);
+    display: flex; /* Use flex to center content vertically and horizontally */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+img {
+    max-width: 100%;
+    height: max-content;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.bd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1200px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*-- PAGES --*/
+.title-shop {
+    position: relative;
+    margin: 0 2.5rem;
+}
+
+.title-shop::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 72px;
+    height: 2px;
+    background-color: var(--dark-color);
+    margin-left: .25rem;
+}
+
+/*-- COMPONENT --*/
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* Apply colors in a loop for 5 colors */
+.card:nth-child(5n+1) {
+    background-color: var(--first-color);
+}
+.card:nth-child(5n+2) {
+    background-color: var(--second-color);
+}
+.card:nth-child(5n+3) {
+    background-color: var(--third-color);
+}
+.card:nth-child(5n+4) {
+    background-color: var(--fourth-color);
+}
+.card:nth-child(5n+5) {
+    background-color: var(--fifth-color);
+}
+
+.card__img {
+    width: 250px;
+    height: auto;
+    padding: 10px 0;
+    transition: .5s;
+}
+
+.card__name {
+    position: absolute;
+    left: -25%;
+    top: 0;
+    width: 3.5rem;
+    height: 100%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    background-color: var(--dark-color);
+    color: #fff;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.card__icon {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+.card__icon:hover {
+    color: var(--accent-color);
+}
+
+.card__precis {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: .5s;
+}
+
+.card__preci {
+    display: block;
+    text-align: center;
+}
+
+.card__preci--before {
+    font-size: var(--smaller-font-size);
+    color: var(--accent-color);
+    margin-bottom: .25rem;
+}
+
+.card__preci--now {
+    font-size: var(--h3-font-size);
+    font-weight: bold;
+}
+
+/* Move left */
+.card:hover {
+    box-shadow: 0 .5rem 1rem #D1D9E6;
+}
+
+.card:hover .card__name {
+    left: 0;
+}
+
+.card:hover .card__img {
+    transform: rotate(30deg);
+    margin-left: 3.5rem;
+}
+
+.card:hover .card__precis {
+    margin-left: 3.5rem;
+    padding: 0 0.5rem;
+}
+
+/*-- FOOTER --*/
+footer {
+    text-align: center;
+}
+
+/*-- MEDIA QUERIES --*/
+@media screen and (min-width: 1200px) {
+    .title-shop {
+        margin: 0 5rem;
+    }
+
+    .bd-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.main {
+    width: 100%; /* Ensure main takes full width */
+    padding: 0 10px; /* Add some horizontal padding */
+    margin-top: 2rem; /* Margin for separation from title */
+}
+
+/* Additional Media Queries for larger screens (if needed) */
+@media screen and (min-width: 768px) {
+   
+}

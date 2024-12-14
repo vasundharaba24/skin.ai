@@ -1,0 +1,31 @@
+/* ProductDetail.css */
+
+.product-detail {
+    padding: 20px;
+  }
+  
+  .product-detail img {
+    border-radius: 8px;
+  }
+  
+  .product-detail h2 {
+    margin-bottom: 10px;
+  }
+  
+  .product-detail h4 {
+    color: #28a745;
+    margin-bottom: 20px;
+  }
+  
+  .product-detail p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .product-detail .btn {
+    padding: 10px 20px;
+  }
+  
+  .product-detail .btn-secondary {
+    margin-top: 10px;
+  }  

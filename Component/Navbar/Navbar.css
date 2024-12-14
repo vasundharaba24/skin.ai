@@ -1,0 +1,12 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Helvetica, Arial, sans-serif;
+   margin-bottom: 30px;
+}
+.btn-demo{
+    background-color: #4F8EF0;
+    border-radius: 40%;
+}
+
+.nav-link{
+    color: rgb(70, 69, 69);
+}
